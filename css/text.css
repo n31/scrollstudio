@@ -1,5 +1,6 @@
 #stickyLogo {
     position: fixed;
+    opacity: .5;
 }
 
 #firstText {
@@ -24,6 +25,17 @@
 }
 
 #dialogText {
+    font-size: 1vw;
+    padding-left: 5em;
+}
+
+#adwardName {
+    display: block;
+    font-size: 2vw;
+    padding-left: 5em;
+}
+
+#copyright {
     font-size: 1vw;
     padding-left: 5em;
 }
