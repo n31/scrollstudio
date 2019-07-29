@@ -12,7 +12,7 @@
     padding: .5em;
 }
 
-.pipelineContainer > .step > .description {
+.pipelineContainer .step > .description {
     display: block;
     margin: .5em;
 }
