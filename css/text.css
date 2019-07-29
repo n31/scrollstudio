@@ -5,13 +5,11 @@
 #firstText {
     font-size: 60px;
     width: 85%;
-    border: 1px solid red;
     width: 100%;
     text-align: right;
 }
 #firstText h2 {
     width: 85%;
-    border: 1px solid green;
 }
 
 #secondText {

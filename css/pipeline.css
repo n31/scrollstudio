@@ -1,0 +1,18 @@
+.pipelineContainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2vw;
+}
+
+.pipelineContainer > .step {
+    background-color: #000000;
+    color: white;
+    font-size: 2vw;
+    padding: .5em;
+}
+
+.pipelineContainer > .step > .description {
+    display: block;
+    margin: .5em;
+}
