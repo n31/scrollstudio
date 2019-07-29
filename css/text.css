@@ -3,7 +3,7 @@
 }
 
 #firstText {
-    font-size: 60px;
+    font-size: 5vw;
     width: 100%;
     text-align: right;
 }
@@ -12,10 +12,18 @@
 }
 
 #secondText {
-    font-size: 35px;
-    padding-left: 40%;
-    padding-right: 10%;
+    font-size: 3vw;
+    padding-left: 35%;
+    padding-right: 15%;
+    text-align: right;
 }
 
 #emailLink {
+    font-size: 2vw;
+    padding-left: 2em;
+}
+
+#dialogText {
+    font-size: 1vw;
+    padding-left: 5em;
 }
