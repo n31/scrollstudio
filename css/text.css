@@ -4,7 +4,6 @@
 
 #firstText {
     font-size: 60px;
-    width: 85%;
     width: 100%;
     text-align: right;
 }
@@ -13,10 +12,10 @@
 }
 
 #secondText {
-    font-size: 25px;
-    width: 30%;
+    font-size: 35px;
+    padding-left: 40%;
+    padding-right: 10%;
 }
 
 #emailLink {
-
 }
