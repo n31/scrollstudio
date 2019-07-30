@@ -1,5 +1,6 @@
 #stickyLogo {
     position: fixed;
+    left: 2vw;
     opacity: .5;
 }
 
@@ -17,6 +18,18 @@
     padding-left: 35%;
     padding-right: 15%;
     text-align: right;
+    /*
+    background-image: url("https://media.discordapp.net/attachments/522061285324619776/605396876023562240/1__1.png?width=814&height=500");
+    background-repeat: no-repeat;
+    background-size: 90vw 50vw;
+    background-position: 1em;*/
+}
+
+#adwards {/*
+    background-image: url("https://media.discordapp.net/attachments/522061285324619776/605398720036732933/2__1.png?width=1026&height=446");
+    background-repeat: no-repeat;
+    background-size: 70vw 50vw;
+    background-position: 1em;*/
 }
 
 #emailLink {
