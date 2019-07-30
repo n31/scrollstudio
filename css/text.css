@@ -52,3 +52,10 @@
     font-size: 1vw;
     padding-left: 5em;
 }
+
+#footerText {
+    font-size: 4vw;
+    width: 80%;
+    text-align: right;
+    margin-left: 2em;
+}
