@@ -1,130 +1,346 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link href="css/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/scrollbar.css">
-    <link rel="stylesheet" href="css/body.css">
-    <link rel="stylesheet" href="css/logo.css">
-    <link rel="stylesheet" href="css/text.css">
-    <link rel="stylesheet" href="css/pipeline.css">
-  </head>
-  
-  <body>
-    <h1 id="stickyLogo">SCROLL STUIO</h1>
 
-    <img src='https://media.discordapp.net/attachments/522061285324619776/605370071275274270/Log__1.png?width=441&height=481'
-         id="logo"
-    >
-    <div id="textWrapper">
-      <div id='firstText'>
-        <h2>Scroll Studio - мы те, кто даст возможность людям купить ваш продукт. Мы делаем веб-сайты, дизайн, брендинг и разработку.</h2>
-      </div>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        html, body, svg {
+            height: 100%
+        }
+        svg {
+            width: 100%;
+            vertical-align: middle;
+            position: fixed;
+            z-index: -10;
+        }
+
+        /*logo text*/
+        #logoText {
+            font-size: 1vw;
+            font-family: 'Roboto';
+            font-weight: bold;
+            padding-top: 5vw;
+            margin-left: 5vw;
+        }
+
+        #imgLogo {
+            margin-top: 5vw;
+            margin-bottom: 5vw;
+            width: 30vw;
+            margin-left: 60vw;
+        }
+
+        /*first text*/
+        #firstText {
+            font-family: 'Roboto';
+            font-size: 6vw;
+            font-weight: bold;
+            line-height: 0.8;
+            width: 90vw;
+            margin-left: 6vw;
+            margin-top: 2vw;
+        }
+
+        /* second text */
+        #secondText {
+            background-image: url("https://cdn.discordapp.com/attachments/522061285324619776/605768031288950818/1__1.svg");
+            background-repeat: no-repeat;
+            background-position: right;
+            height: 50vw;
+        }
+        #secondText > #text {
+            width: 70%;
+            position: relative;
+            top: 54%;
+            transform: translateY(-54%);
+            left: 25vw;
+            font-size: 2.5vw;
+            text-align: right;
+            color: white;
+            font-family: 'Roboto';
+        }
+
+        /*advards text*/
+        #advardsText {
+            background-image: url("https://cdn.discordapp.com/attachments/522061285324619776/605769010000166933/2__1.svg");
+            background-repeat: no-repeat;
+            background-position: left;
+            height: 35vw;
+            background-size: 80vw;
+        }
+        #advardsText > #advardItems > ul > li {
+            list-style-type: none;
+        }
+        #advardsText > #advardItems {
+            font-size: 2.5vw;
+            width: 60vw;
+            position: relative;
+            top: 7vw;
+            left: 1.5vw;
+            color: white;
+            font-family: 'Roboto';
+        }
+
+        /*first email link*/
+        #firstEmailLink {
+            width: 55vw;
+            font-size: 4vw;
+            font-family: 'Roboto';
+            margin-left: 4vw;
+        }
+        #firstEmailLink > a {
+            color: #000;
+        }
+
+        /* advard dialog*/
+        #advardsDialog {
+            font-size: 4.5vw;
+            width: 55vw;
+            font-family: 'Roboto';
+            margin-top: 10vw;
+            margin-left: 40vw;
+            line-height: 0.8;
+        }
+
+        /*second email link*/
+        #secondEmailLink {
+            width: 55vw;
+            font-size: 4vw;
+            font-family: 'Roboto';
+            margin-left: 40vw;
+            text-align: right;
+        }
+        #secondEmailLink > a {
+            color: #000;
+        }
+
+        /* pipeline dialog*/
+        #pipelineDialog {
+            font-size: 4.5vw;
+            width: 70vw;
+            font-family: 'Roboto';
+            margin-top: 10vw;
+            margin-left: 4vw;
+            line-height: 0.8;
+        }
+
+        /* pipeline */
+        .pipelineContainer {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 2vw;
+            padding: 4vw;
+        }
+
+        .pipelineContainer > .step {
+            font-family: 'Roboto';
+            background-color: rgba(0, 0, 0, .5);
+            color: white;
+            font-size: 1.5vw;
+            padding: .5em;
+        }
+
+        .pipelineContainer .step > .description {
+            display: block;
+            margin: .5em;
+        }
+
+        /*third email link*/
+        #thirdEmailLink {
+            width: 55vw;
+            font-size: 4vw;
+            font-family: 'Roboto';
+            margin-left: 4vw;
+            margin-top: 5vw;
+        }
+        #thirdEmailLink > a {
+            color: #000;
+        }
+
+
+        /*footer text*/
+        #footerText {
+            font-family: 'Roboto';
+            font-size: 6vw;
+            font-weight: bold;
+            line-height: 0.8;
+            width: 90vw;
+            margin-left: 6vw;
+            margin-top: 20vw;
+        }
+
+        /*copyright*/
+        #copyright {
+            font-size: 1vw;
+            font-family: 'Roboto';
+            font-weight: bold;
+            margin-top: 5vw;
+            padding-bottom: 5vw;
+            margin-left: 5vw;
+        }
+    </style>
+</head>
+<body>
+    <svg>
+        <defs>
+            <linearGradient id="gradient" y2="1">
+                <stop stop-color="rgb(80, 220, 255)" offset="0" />
+                <stop stop-color="rgb(250, 90, 255)" offset="1" />
+            </linearGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#gradient)" />
+    </svg>
+    <div id="logoText">SCROLL STUDIO</div>
+
+    <img id="imgLogo" src="https://media.discordapp.net/attachments/522061285324619776/605370071275274270/Log__1.png?width=441&height=481">
+
+    <div id="firstText">
+        Scroll Studio - мы те, кто даст возможность людям купить ваш продукт.
+        Мы делаем веб-сайты, дизайн, брендинг и разработку.
     </div>
 
-    <div id='secondText' data-aos="zoom-in-left">
-      <p>С тех пор, как вы зашли на эту страницу вы, наверное, ищите кого-нибудь, кто сможет сделать ваш новый веб-сайт. Очень хорошо! Вы нашли тех, кто это сделает. Мы занимаемся проектами с нуля (да, даже ваше лого или бренд, так что не волнуйтесь), или проектами уже известных брендов, которые основаны на уже существующей визуальной и эстетической информации. Наша команда состоит из проффесионалов, способных справляться даже с самыми сложными задачами.</p>
-    </div>
-    
-    <div id='emailLink' data-aos="fade-right">
-        <h1 >Уже убедились? 👉 scrollstudio.office@gmail.com</h1>
-    </div>
-
-    <div id="dialogText">
-    <h1>Нет? Хорошо, видим. Посмотрите на наши награды и рекомендации:</h1>
-    </div>
-
-    <div id="adwards" data-aos="fade-right">
-        <span id='adwardName'>1x 🏆 Designer of The Year (2018)</span>
-        <span id='adwardName'>1x Interactive Designer of The Year (2017)</span>
-        <span id='adwardName'>1x Site of The Year Kudos Award (2017)</span>
-        <span id='adwardName'>10x Site of the Day</span>
-        <span id='adwardName'>1x Part of the judging panel - Senior Judge</span>
-        <span id='adwardName'>2x Designer of The Year Nominee (2017/2016)</span>
+    <div id="secondText">
+        <div id="text">
+            С тех пор, как вы зашли на эту страницу вы, наверное, ищите кого-нибудь,
+             кто сможет сделать ваш новый веб-сайт. Очень хорошо! 
+             Вы нашли тех, кто это сделает. Мы занимаемся проектами с нуля 
+             (да, даже ваше лого или бренд, так что не волнуйтесь), 
+             или проектами уже известных брендов, которые основаны на уже существующей визуальной и эстетической информации.
+             Наша команда состоит из проффесионалов, способных справляться даже с самыми сложными задачами.
+        </div>
     </div>
 
-    <div id='emailLink'>
-    <h1>Сделайте это! 👇 scrollstudio.office@gmail.com</h1>
+    <div id="firstEmailLink">
+        Уже убедились? 👇<br><a href="mailto:scrollstudio.office@gmail.com">scrollstudio.office@gmail.com</a>
     </div>
 
-    <div id="dialogText">
-    <h1>Хмм, Вас сложно убедить! Конечно, вы хотите узнать больше о том, как мы справляемся с задачами:</h1>
+    <div id="advardsDialog">
+            Нет? Хорошо, видим. Посмотрите на наши награды и рекомендации
     </div>
-    
+
+    <div id="advardsText">
+        <div id="advardItems">
+            <ul>
+                <li>1x 🏆 Designer of The Year (2018)</li>
+                <li>1x Interactive Designer of The Year (2017)</li>
+                <li>1x Site of The Year Kudos Award (2017)</li>
+                <li>10x Site of the Day</li>
+                <li>1x Part of the judging panel - Senior Judge</li>
+                <li>2x Designer of The Year Nominee (2017/2016)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="secondEmailLink">
+        Сделайте это! 👇<br><a href="mailto:scrollstudio.office@gmail.com">scrollstudio.office@gmail.com</a>
+    </div>
+
+    <div id="pipelineDialog">
+        Хмм, Вас сложно убедить! Конечно, вы хотите узнать больше о том, как мы справляемся с задачами:
+    </div>
+
     <div class='pipelineContainer' data-aos="zoom-in-down">
-      <div class='step'>
-        <span class='name'>
-          1.
-          Получение задачи (бесплатно)
-          </span>
-        <span class='description'>Пришлите нам письмо со следующей информацией: кто вы / ключевые значения / цели бизнеса / целевая аудитория / ваш товар / ваши пожелания / объем вашего проекта или карту сайта / конечные сроки реализации / примеры понравившихся сайтов / все что вы считаете важным.</span>
-      </div>
+            <div class='step'>
+              <span class='name'>
+                1.
+                Получение задачи (бесплатно)
+                </span>
+              <span class='description'>Пришлите нам письмо со следующей информацией: кто вы / ключевые значения / цели бизнеса / целевая аудитория / ваш товар / ваши пожелания / объем вашего проекта или карту сайта / конечные сроки реализации / примеры понравившихся сайтов / все что вы считаете важным.</span>
+            </div>
+      
+            <div class='step'>
+              <span class='name'>
+                2.
+      Оценка работы (бесплатно)
+                </span>
+              <span class='description'>Мы проведем глубокий анализ вашего письма и оценим, соответствует ли проект условиям и требованиям обеих сторон. Если нам подходит ваш проект, мы назначаем онлайн встречу (skype/viber/telegram/whatsapp/etc.) для обсуждения нашей дальнейшей работы.</span>
+            </div>
+      
+            <div class='step'>
+              <span class='name'>
+                3.
+                Обсуждение пожеланий
+                </span>
+              <span class='description'>Мы обсуждаем подходы и концепции, чтобы найти идеальное решение для ваших нужд. При необходимости может быть несколько сеансов.</span>
+            </div>
+      
+            <div class='step'>
+              <span class='name'>
+                4.
+                Дизайн
+                </span>
+              <span class='description'>Тут начинается магия. Наш дизайнер сделает 2-3 иллюстрации, которые будут показывать как ваш сайт будет выглядеть в конечном итоге. При необходимости будут разработаны дополнительные иллюстрации.</span>
+            </div>
+      
+            <div class='step'>
+              <span class='name'>
+                5.
+                Реализация
+                </span>
+              <span class='description'>После подтверждения эскизов сайта мы начнем разработку сайта. Вам будет предоставлена тестовая ссылка, так что вы сможете проверить текущий статус вашего заказа на каждом этапе.</span>
+            </div>
+      
+            <div class='step'>
+              <span class='name'>
+                6.
+                Гарантия качества
+                </span>
+              <span class='description'>После завершения разработки мы продолжим тестирование на разных браузерах и устройствах для исправления багов. После вашего окончательного одобрения сайт будет готов к использованию.</span> 
+            </div>
+          </div>
 
-      <div class='step'>
-        <span class='name'>
-          2.
-Оценка работы (бесплатно)
-          </span>
-        <span class='description'>Мы проведем глубокий анализ вашего письма и оценим, соответствует ли проект условиям и требованиям обеих сторон. Если нам подходит ваш проект, мы назначаем онлайн встречу (skype/viber/telegram/whatsapp/etc.) для обсуждения нашей дальнейшей работы.</span>
-      </div>
-
-      <div class='step'>
-        <span class='name'>
-          3.
-          Обсуждение пожеланий
-          </span>
-        <span class='description'>Мы обсуждаем подходы и концепции, чтобы найти идеальное решение для ваших нужд. При необходимости может быть несколько сеансов.</span>
-      </div>
-
-      <div class='step'>
-        <span class='name'>
-          4.
-          Дизайн
-          </span>
-        <span class='description'>Тут начинается магия. Наш дизайнер сделает 2-3 иллюстрации, которые будут показывать как ваш сайт будет выглядеть в конечном итоге. При необходимости будут разработаны дополнительные иллюстрации.</span>
-      </div>
-
-      <div class='step'>
-        <span class='name'>
-          5.
-          Реализация
-          </span>
-        <span class='description'>После подтверждения эскизов сайта мы начнем разработку сайта. Вам будет предоставлена тестовая ссылка, так что вы сможете проверить текущий статус вашего заказа на каждом этапе.</span>
-      </div>
-
-      <div class='step'>
-        <span class='name'>
-          6.
-          Гарантия качества
-          </span>
-        <span class='description'>После завершения разработки мы продолжим тестирование на разных браузерах и устройствах для исправления багов. После вашего окончательного одобрения сайт будет готов к использованию.</span> 
-      </div>
+    <div id="thirdEmailLink">
+            Вам это понравилось 👆 ?<br><a href="mailto:scrollstudio.office@gmail.com">scrollstudio.office@gmail.com</a>
     </div>
 
-    <div id='emailLink' data-aos="fade-up-right">
-    <h1>
-      Вам это понравилось? 👆 scrollstudio.office@gmail.com
-    </h1>
-    </div>
-    <!--
-    <h2>SOCIAL
-      Twitter
-      Facebook
-      Behance</h2>
-    -->
     <div id="footerText">
-    <h1>Каким образом вы спустились сюда? Вернитесь в начало и прочитайте все это еще раз. Может быть это поможет.</h1>
+            Каким образом вы спустились сюда?
+            Вернитесь в начало и прочитайте все это еще раз, может быть это поможет.
+    </div>
+    
+    <div id="copyright">
+        Scroll Studio, Minsk, Belarus<br>
+        © 2018 by Scroll Studio. All Rights Reserved.
     </div>
 
-    <h6 id="copyright">Scroll Studio, Minsk, Belarus</h6>
 
-    <h6 id="copyright">© 2018 by Scroll Studio. All Rights Reserved.</h6>
-
-    <script src="js/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animateplus/2.0.1/animateplus.min.js"></script>
     <script>
-        AOS.init();
-      </script>
-  </body>
+        const gradient = Array.from(document.querySelectorAll("stop"), (stop, index) => ({
+        stop,
+        colors: [
+            stop.getAttribute("stop-color").match(/\d+/g).map(Number),
+            index ? [255, 255, 120] : [20, 230, 100]
+        ]
+        }));
+
+        animate({
+        easing: "out-quartic",
+        duration: 4000,
+        loop: true,
+        change: progress =>
+            gradient.forEach(({stop, colors}) => {
+            const [from, to] = colors;
+            const [r, g, b] = from.map((value, index) =>
+                Math.round(value + progress * (to[index] - value)));
+            stop.setAttribute("stop-color", `rgb(${r}, ${g}, ${b})`);
+            if (progress == 1) colors.reverse();
+            })
+        });
+    </script>
+</body>
 </html>
