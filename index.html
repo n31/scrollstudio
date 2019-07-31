@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
+    <link href="css/libs/animate.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -224,7 +226,7 @@
         </div>
     </div>
 
-    <div id="firstEmailLink">
+    <div id="firstEmailLink" class="wow bounceInLeft">
         Уже убедились? 👇<br><a href="mailto:scrollstudio.office@gmail.com">scrollstudio.office@gmail.com</a>
     </div>
 
@@ -245,7 +247,7 @@
         </div>
     </div>
 
-    <div id="secondEmailLink">
+    <div id="secondEmailLink" class="wow bounceInUp">
         Сделайте это! 👇<br><a href="mailto:scrollstudio.office@gmail.com">scrollstudio.office@gmail.com</a>
     </div>
 
@@ -303,7 +305,7 @@
             </div>
           </div>
 
-    <div id="thirdEmailLink">
+    <div id="thirdEmailLink" class="wow bounceInLeft">
             Вам это понравилось 👆 ?<br><a href="mailto:scrollstudio.office@gmail.com">scrollstudio.office@gmail.com</a>
     </div>
 
@@ -341,6 +343,11 @@
             if (progress == 1) colors.reverse();
             })
         });
+    </script>
+
+    <script src="js/libs/wow.min.js"></script>
+    <script>
+        new WOW().init();
     </script>
 </body>
 </html>
