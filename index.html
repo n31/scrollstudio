@@ -13,9 +13,18 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
     <style>
+        ::selection {
+            color: white;
+            background: purple;
+        }
+        ::-moz-selection {
+            color: white;
+            background: purple;
+        }
         body, html {
             margin: 0;
             padding: 0;
+            cursor: default;
         }
         html, body, svg {
             height: 100%
