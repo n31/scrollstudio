@@ -6,12 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
     <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
+
+    
     <style>
         ::selection {
             color: white;
@@ -201,6 +205,11 @@
             padding-bottom: 5vw;
             margin-left: 5vw;
         }
+
+        /*back to top*/
+        #backToTop {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -233,7 +242,7 @@
         </div>
     </div>
 
-    <div id="firstEmailLink">
+    <div id="firstEmailLink" class="wow bounceUp">
         Уже убедились? 👇<br><a href="mailto:scrollstudio.office@gmail.com">scrollstudio.office@gmail.com</a>
     </div>
 
@@ -318,7 +327,7 @@
 
     <div id="footerText">
             Каким образом вы спустились сюда?
-            Вернитесь в начало и прочитайте все это еще раз, может быть это поможет.
+            Вернитесь <span style="display: inline-block" id="backToTop" class="animated infinite flash delay-2s">в начало</span> и прочитайте все это еще раз, может быть это поможет.
     </div>
     
     <div id="copyright">
@@ -349,6 +358,17 @@
             stop.setAttribute("stop-color", `rgb(${r}, ${g}, ${b})`);
             if (progress == 1) colors.reverse();
             })
+        });
+    </script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        $("#backToTop").click(function (){
+            $("body,html").animate({
+                scrollTop:0
+            }, 800);
+            return false;
         });
     </script>
 </body>
